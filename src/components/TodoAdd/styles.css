@@ -1,0 +1,31 @@
+.todoadd {
+  width: 90%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid orange;
+}
+
+.form--todoadd {
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid green;
+}
+
+.input--todoadd {
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.btn--todoadd {
+  width: 80px;
+  height: 40px;
+}
+

@@ -1,0 +1,8 @@
+.todolist {
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
