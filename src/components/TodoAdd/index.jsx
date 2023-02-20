@@ -9,7 +9,6 @@ const TodoAdd = () => {
   const { description, modalAdd, setModalAdd, onInputChange, onFormSubmit, addTodo } = useContext(UserContext);
 
   return (
-    // <div className={`todoadd ${!modalAdd && 'disable'}`}>
     <div className={!modalAdd ? 'disable' : 'todoadd'}>
       <form onSubmit={onFormSubmit} className='form--todoadd'>
 

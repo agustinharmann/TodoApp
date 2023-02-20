@@ -17,8 +17,6 @@ const Home = () => {
       <TodoList todos={todos} />
       <TodoAdd />
       <div className={ modalAdd ? `disable` :`container_btn-drop--todoadd` }>
-      {/* <div className={ modalAdd ? `disable` :`container_btn-drop--todoadd` }> */}
-
         <button
           className='btn_drop-modal--todoadd'
           onClick={()=>setModalAdd(!modalAdd)}
