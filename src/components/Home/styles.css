@@ -3,10 +3,12 @@
   height: auto;
   padding: 10px 0px;
   display: flex;
-  justify-content: center;
-  /* MOMENTANEO */
   align-items: center;
   flex-direction: column;
+}
+
+.title {
+  color: #FFFFFF;
 }
 
 .todo_counter--home {
@@ -21,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 50px;
 }
@@ -47,4 +49,16 @@
   width: 80%;
   height: 80%;
   color: #FFFFFF;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container_btn-drop--todoadd {
+    right: 30px;
+  }
+
+  .container_btn-drop--todoadd {
+    width: 50px;
+    height: 50px;
+  }
 }

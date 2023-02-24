@@ -5,9 +5,16 @@
 }
 
 body {
-  background-color: #282c34;
+  /* background-color: #282c34;
+  background-color: #302F57;
+  background-color: #414166;
+  background-color: #61619b;
+  background-color: #232235;
+  background-color: #45437a;  */
+  background-color: #2e2d3b;
   min-width: 280px;
-  /* AGREGAR MAX WIDTH */
+  max-width: 1500px;
+  /* AGREGAR flex a un contenedor superior */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

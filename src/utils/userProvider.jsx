@@ -5,7 +5,6 @@ import { todoReducer } from './todoReducer';
 
 const UserContext = createContext();
 
-
 const initialState = [];
 
 const init = () => {
@@ -13,8 +12,13 @@ const init = () => {
 }
 
 const UserProvider = ({ children }) => {
-
+  
   const [modalAdd, setModalAdd] = useState(false);
+  const [serch, setSearch] = useState('')
+  
+    const onSearchTodo = () => {
+      setSearch(serch);
+    }
 
   const [todos, dispatch] = useReducer(todoReducer, initialState, init);
 
@@ -48,6 +52,7 @@ const UserProvider = ({ children }) => {
       done: false,
     };
 
+    setModalAdd(false)
     handleNewTodo(newTodo);
     onResetForm();
   };
@@ -71,6 +76,8 @@ const UserProvider = ({ children }) => {
       value={{
         todos,
         description,
+        onSearchTodo,
+        serch,
         modalAdd,
         setModalAdd,
         onInputChange,

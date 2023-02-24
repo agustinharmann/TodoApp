@@ -10,9 +10,9 @@ const Home = () => {
   const { todos, modalAdd, setModalAdd } = useContext(UserContext);
 
   return (
-    <div className='home'>
+    <div className='home '>
       <div className='todo_counter--home'>
-        <h1>Todos...</h1>
+        <h1 className='title'>Todos...</h1>
       </div>
       <TodoList todos={todos} />
       <TodoAdd />
