@@ -6,13 +6,12 @@ import './styles.css';
 
 const TodoAdd = () => {
 
-  const { description, modalAdd, setModalAdd, onInputChange, onFormSubmit, addTodo } = useContext(UserContext);
+  const { description, modalAdd, setModalAdd, onInputChange, onFormSubmit, addTodo, theme } = useContext(UserContext);
 
   return (
     <div className={!modalAdd ? 'disable' : 'todoadd'}>
-      <form onSubmit={onFormSubmit} className='form--todoadd'>
-
-        <div className="container_btn-close--todoadd">
+      <form onSubmit={onFormSubmit} className={`form--todoadd ${ theme && 'form-ligth_mode--todoadd' }`}>
+        <div className='container_btn-close--todoadd'>
           <button
             className='btn_close-modal--todoadd'
             onClick={()=>setModalAdd(!modalAdd)}
@@ -20,12 +19,11 @@ const TodoAdd = () => {
             <IoCloseSharp className='icon_close-modal--todoadd' />
           </button>
         </div>
-
         <input
           className='input--todoadd'
           type='text'
           autoComplete='off'
-          placeholder='Add TODO...'
+          placeholder="Add task..."
           name='description'
           onChange={onInputChange}
           value={description}

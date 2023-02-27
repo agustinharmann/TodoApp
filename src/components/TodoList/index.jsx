@@ -2,11 +2,12 @@ import React from 'react';
 import { TodoItem } from '../TodoItem';
 import './styles.css';
 
-const TodoList = ({ todos = [] }) => {
+const TodoList = ({ searchedTodos }) => {
+
   return (
     <div className='todolist'>
       {
-        todos.map(todo =>
+        searchedTodos.map(todo =>
           <TodoItem
             key={todo.id}
             todo={todo}

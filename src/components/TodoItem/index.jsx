@@ -5,10 +5,10 @@ import { UserContext } from '../../utils/userProvider';
 import './styles.css';
 
 const TodoItem = ({todo}) => {
-  const { delteTodo, completeTodo } = useContext(UserContext);
+  const { delteTodo, completeTodo, theme } = useContext(UserContext);
 
   return (
-    <div className="todoitem">
+    <div className={`todoitem ${ theme && 'ligth_todoitem' }`}>
       <button
         className='btn--todo_item check'
         onClick={()=>completeTodo(todo.id)}

@@ -12,6 +12,7 @@ body {
   background-color: #232235;
   background-color: #45437a;  */
   background-color: #2e2d3b;
+  /* BUSCAR A DONDE PISA ESTE BODY */
   min-width: 280px;
   max-width: 1500px;
   /* AGREGAR flex a un contenedor superior */
@@ -20,6 +21,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.body__theme {
+  background-color: #d3d0d0;;
 }
 
 code {

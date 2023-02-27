@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
-import { BsSearch } from 'react-icons/bs';
 import { UserContext } from '../../utils/userProvider';
 import './styles.css';
 
 const Navbar = () => {
 
-  const { serch, onSearchTodo } = useContext(UserContext);
+  const { search, onInputTodoChange } = useContext(UserContext);
 
   return (
     <div className='navbar'>
@@ -13,13 +12,10 @@ const Navbar = () => {
         <input
           className='input_navbar--header'
           type='text'
-          placeholder='Buscar..'
-          value={serch}
-          onChange={onSearchTodo}
+          placeholder="Search To do..."
+          value={search}
+          onChange={onInputTodoChange}
         />
-        <button className='btn_navbar--header'>
-          <BsSearch className='icon_search-navbar--header' />
-        </button>
       </form>
     </div>
   );
