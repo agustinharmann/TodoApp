@@ -7,7 +7,7 @@ const Navbar = () => {
   const { search, onInputTodoChange } = useContext(UserContext);
 
   return (
-    <div className='navbar'>
+    <nav className='navbar'>
       <form className='form_navbar--header'>
         <input
           className='input_navbar--header'
@@ -17,7 +17,7 @@ const Navbar = () => {
           onChange={onInputTodoChange}
         />
       </form>
-    </div>
+    </nav>
   );
 };
 

@@ -4,6 +4,7 @@ import { TodoList } from '../TodoList';
 import { TodoAdd } from '../TodoAdd';
 import { GoPlus } from 'react-icons/go';
 import './styles.css';
+import { Status } from '../Status';
 
 const Home = () => {
 
@@ -12,6 +13,7 @@ const Home = () => {
   return (
     <div className='home '>
       <div className='todo_counter--home'>
+        <Status />
         <p className='title'>
           Total tasks: {totalTodos}
         </p>

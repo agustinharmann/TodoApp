@@ -19,6 +19,7 @@
   width: 80%;
   height: auto;
   padding: 10px;
+  overflow: auto;
 }
 
 .btn--todo_item {

@@ -11,7 +11,7 @@ const Header = () => {
   const { theme, setTheme } = useContext(UserContext);
 
   return (
-    <div className={`header ${theme && 'header__ligth'}`}>
+    <header className={`header ${theme && 'header__ligth'}`}>
       <div className='container_logo--header'>
         <img className='logo__app' src={logo__app} alt="Logo TodoApp" />
       </div>
@@ -22,15 +22,10 @@ const Header = () => {
             {
               theme ? <BsSun className='sun-ligth_mode--header' /> : <BsMoon className={'sun-ligth_mode--header'} />
             }
-            
           </div>
         </div>
       </div>
-      {/* <label className='switch'>
-          <input className='input_bar--navbar' type="checkbox" />
-          <span className='slider round' />
-        </label> */}
-    </div>
+    </header>
   );
 };
 

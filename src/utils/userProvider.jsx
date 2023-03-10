@@ -14,13 +14,11 @@ const init = () => {
 const UserProvider = ({ children }) => {
 
   const [modalAdd, setModalAdd] = useState(false);
-
   const [search, setSearch] = useState('');
 
-
-
-
   let [todos, dispatch] = useReducer(todoReducer, initialState, init);
+
+  
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos) || [])
@@ -102,6 +100,8 @@ const UserProvider = ({ children }) => {
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
+
+  
   const body = document.getElementsByTagName("body")[0];
   if (theme) {
     body.classList.add('body__theme')
