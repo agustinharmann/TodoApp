@@ -1,7 +1,7 @@
 .home {
   width: 100%;
   height: auto;
-  padding: 10px 0px;
+  padding: 10px 0px 0px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -33,25 +33,23 @@
 }
 
 .container_btn-drop--todoadd {
-  width: 70px;
-  height: 70px;
+  width: 90%;
+  height: auto;
+  padding: 10px 0px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 30px;
-  right: 50px;
+  justify-content: flex-end;
+  position: sticky;
+  bottom: 0;
 }
 
 .btn_drop-modal--todoadd {
-  width: 100%;
-  height: 100%;
+  width: 70px;
+  height: 70px;
   box-shadow: 0 0 5px black;
   border: none;
   border-radius: 50%;
-  /* background-color: #41ABDA; */
-  /* background-color: #4d497e; */
   background-color: #5046c7;
+  position: sticky;
 }
 
 .btn_drop-modal_ligth--todoadd {
@@ -72,15 +70,10 @@
   color: #FFFFFF;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 969px) {
 
   .container_btn-drop--todoadd {
-    right: 30px;
-  }
-
-  .container_btn-drop--todoadd {
-    width: 50px;
-    height: 50px;
+    width: auto;
   }
   
 }

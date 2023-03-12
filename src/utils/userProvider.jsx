@@ -18,23 +18,21 @@ const UserProvider = ({ children }) => {
 
   let [todos, dispatch] = useReducer(todoReducer, initialState, init);
 
-  
-
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos) || [])
+    localStorage.setItem('todos', JSON.stringify(todos) || []);
   }, [todos]);
 
   const handleNewTodo = (todo) => {
     const action = {
       type: '[TODO] Add Todo',
-      payload: todo
+      payload: todo,
     };
 
     dispatch(action);
   };
 
   const { description, onInputChange, onResetForm } = useForm({
-    description: ''
+    description: '',
   });
 
   const onFormSubmit = (e) => {
@@ -48,7 +46,7 @@ const UserProvider = ({ children }) => {
       done: false,
     };
 
-    setModalAdd(false)
+    setModalAdd(false);
     handleNewTodo(newTodo);
     onResetForm();
   };
@@ -56,28 +54,25 @@ const UserProvider = ({ children }) => {
   const delteTodo = (id) => {
     dispatch({
       type: '[TODO] Delete Todo',
-      payload: id
+      payload: id,
     });
   };
 
   const completeTodo = (id) => {
     dispatch({
       type: '[TODO] Complete Todo',
-      payload: id
+      payload: id,
     });
   };
 
   const onInputTodoChange = ({ target }) => {
     const valueTodo = target.value;
-    setSearch(valueTodo)
+    setSearch(valueTodo);
   };
-
 
   const totalTodos = todos.length;
   const completedTodos = todos.filter(todo => todo.done).length;
   const incompleteTodos = todos.filter(todo => !todo.done).length;
-
-
 
   let searchedTodos = [];
 
@@ -93,22 +88,19 @@ const UserProvider = ({ children }) => {
 
   const [theme, setTheme] = useState(() => {
     const savedMode = JSON.parse(localStorage.getItem('theme'));
-    return savedMode !== null ? savedMode : false; // Valor por defecto
+    return savedMode !== null ? savedMode : false;
   });
 
   useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
-
-  
-  const body = document.getElementsByTagName("body")[0];
+  const body = document.getElementsByTagName('body')[0];
   if (theme) {
-    body.classList.add('body__theme')
+    body.classList.add('body__theme');
   } else {
-    body.classList.remove('body__theme')
-  }
-
+    body.classList.remove('body__theme');
+  };
 
   return (
     <UserContext.Provider
@@ -128,7 +120,7 @@ const UserProvider = ({ children }) => {
         completedTodos,
         incompleteTodos,
         theme,
-        setTheme
+        setTheme,
       }}>
       {children}
     </UserContext.Provider>

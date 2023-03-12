@@ -30,7 +30,9 @@
 }
 
 @media only screen and (max-width: 600px) {
+  
   .input_navbar--header {
     height: 25px;
   }
+
 }

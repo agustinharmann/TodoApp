@@ -1,29 +1,18 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../utils/userProvider';
+import { Status } from '../Status';
 import { TodoList } from '../TodoList';
 import { TodoAdd } from '../TodoAdd';
 import { GoPlus } from 'react-icons/go';
 import './styles.css';
-import { Status } from '../Status';
 
 const Home = () => {
 
-  const { searchedTodos, modalAdd, setModalAdd, totalTodos, completedTodos, incompleteTodos } = useContext(UserContext);
+  const { searchedTodos, modalAdd, setModalAdd } = useContext(UserContext);
 
   return (
-    <div className='home '>
-      <div className='todo_counter--home'>
-        <Status />
-        <p className='title'>
-          Total tasks: {totalTodos}
-        </p>
-        <p className='title'>
-          Completed tasks: {completedTodos}
-        </p>
-        <p className='title'>
-          Pendeing tasks: {incompleteTodos}
-        </p>
-      </div>
+    <div className='home'>
+      <Status />
       <TodoList searchedTodos={searchedTodos} />
       <TodoAdd />
       <div className={modalAdd ? `disable` : `container_btn-drop--todoadd`}>

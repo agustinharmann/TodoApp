@@ -12,7 +12,7 @@ const Navbar = () => {
         <input
           className='input_navbar--header'
           type='text'
-          placeholder="Search To do..."
+          placeholder='Search To do...'
           value={search}
           onChange={onInputTodoChange}
         />
