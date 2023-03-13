@@ -15,12 +15,12 @@ const Home = () => {
       <Status />
       <TodoList />
       <TodoAdd />
-      <div className={modalAdd ? `disable` : `container_btn-drop--todoadd`}>
+      <div className={modalAdd ? `disable-todoadd` : `container-btn-drop_todoadd--home`}>
         <button
-          className='btn_drop-modal--todoadd'
+          className='btn-drop_todoadd--home'
           onClick={() => setModalAdd(!modalAdd)}
         >
-          <GoPlus className='icon_drop-modal--todoadd' />
+          <GoPlus className='icon-drop_todoadd--home' />
         </button>
       </div>
     </main>

@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../../utils/userProvider';
-
-// PASARLE SU CSS
+import './styles.css';
 
 const Status = () => {
 
@@ -9,16 +8,15 @@ const Status = () => {
 
 
   return (
-    <section className='todo_counter--home'>
+    <section className='status'>
       {/* cambiar clases de los p, cambiar clase "--home" */}
-      {/* traer lo estilos de status a este css */}
-      <p className='title'>
+      <p className='title--status'>
         Total tasks: {totalTodos}
       </p>
-      <p className='title'>
+      <p className='title--status'>
         Completed tasks: {completedTodos}
       </p>
-      <p className='title'>
+      <p className='title--status'>
         Pendeing tasks: {incompleteTodos}
       </p>
     </section>

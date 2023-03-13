@@ -4,15 +4,15 @@ import './styles.css';
 
 const Navbar = () => {
 
-  const { search, onInputTodoChange } = useContext(UserContext);
+  const { onFormSubmit, search, onInputTodoChange } = useContext(UserContext);
 
   return (
     <nav className='navbar'>
-      {/* agregar el coso ese de html que dice para q sirve el form */}
-      {/* form--navbar */}
-      <form className='form_navbar--header'>
+      <form
+        className='form--navbar'
+        onSubmit={onFormSubmit}>
         <input
-          className='input_navbar--header'
+          className='input--navbar'
           type='text'
           placeholder='Search To do...'
           value={search}

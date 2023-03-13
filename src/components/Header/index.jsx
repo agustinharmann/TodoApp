@@ -11,21 +11,24 @@ const Header = () => {
   const { theme, setTheme } = useContext(UserContext);
 
   return (
-    <header className={`header ${theme && 'header__ligth'}`}>
-      <div className='container_logo--header'>
-        <img className='logo__app' src={logo__app} alt='Logo TodoApp' />
+    <header className={`header ${theme && 'header_ligth--header'}`}>
+      <div className='container-logo--header'>
+        <img className='logo-app--header' src={logo__app} alt='Logo TodoApp' />
       </div>
       <Navbar />
-      <section className='container_menu--header'>
-        {/* cambiar la clase de menu en el css */}
-        <div onClick={() => setTheme(!theme)} className={`cotainer_menu--header ${theme && 'cotainer_menu-rigth--header'}`}>
-          <div className="redondito">
-            {/* cambiar la clase de redondito en el css */}
+      <section className='container-theme--header'>
+
+        <div className={`container-btn-theme--header ${theme && 'container-btn-theme_ligth--header'}`}
+        >
+          <button className='btn-theme--header'
+            onClick={() => setTheme(!theme)}
+          >
             {
-              theme ? <BsSun className='sun-ligth_mode--header' /> : <BsMoon className={'sun-ligth_mode--header'} />
+              theme ? <BsSun className='icon-btn-theme--header' /> : <BsMoon className='icon-btn-theme--header' />
             }
-          </div>
+          </button>
         </div>
+
       </section>
     </header>
   );

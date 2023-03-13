@@ -9,15 +9,16 @@ const TodoAdd = () => {
   const { description, modalAdd, setModalAdd, onInputChange, onFormSubmit, addTodo, theme } = useContext(UserContext);
 
   return (
-    <section className={!modalAdd ? 'disable' : 'todoadd'}>
-      {/* agregar el coso ese de html que dice para q sirve el form */}
-      <form onSubmit={onFormSubmit} className={`form--todoadd ${ theme && 'form-ligth_mode--todoadd' }`}>
-        <div className='container_btn-close--todoadd'>
+    <section className={!modalAdd ? 'disable-todoadd' : 'todoadd'}>
+      <form
+        className={`form--todoadd ${theme && 'form_ligth--todoadd'}`}
+        onSubmit={onFormSubmit}>
+        <div className='container-btn-close--todoadd'>
           <button
-            className='btn_close-modal--todoadd'
-            onClick={()=>setModalAdd(!modalAdd)}
+            className='btn-close--todoadd'
+            onClick={() => setModalAdd(!modalAdd)}
           >
-            <IoCloseSharp className='icon_close-modal--todoadd' />
+            <IoCloseSharp className='icon-btn-close--todoadd' />
           </button>
         </div>
         <input
@@ -30,7 +31,7 @@ const TodoAdd = () => {
           value={description}
         />
         <button
-          className='btn--todoadd'
+          className='btn-add--todoadd'
           type='submit'
           onClick={addTodo}
         >

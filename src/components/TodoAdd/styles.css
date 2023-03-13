@@ -7,10 +7,7 @@
   background-color: rgba(0,0,0,0.8);
   position: fixed;
   top: 0;
-}
-
-.disable {
-  display: none;
+  z-index: 400;
 }
 
 .form--todoadd {
@@ -26,7 +23,7 @@
   background-color: #302e2e;
 }
 
-.form-ligth_mode--todoadd {
+.form_ligth--todoadd {
   background-color: #646464;
 }
 
@@ -47,18 +44,18 @@
   color: #FFFFFF;
 }
 
-.btn--todoadd {
+.btn-add--todoadd {
   width: 80px;
   height: 40px;
 }
 
-.container_btn-close--todoadd{
+.container-btn-close--todoadd{
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 
-.btn_close-modal--todoadd {
+.btn-close--todoadd {
   width: 20px;
   height: 20px;
   border: none;
@@ -69,14 +66,14 @@
   align-items: center;
 }
 
-.btn_close-modal--todoadd:hover {
+.btn-close--todoadd:hover {
   box-shadow: 0 0 15px black;
 }
 
-.btn_close-modal--todoadd:active {
+.btn-close--todoadd:active {
   box-shadow: 0 0 20px black;
 }
 
-.icon_close-modal--todoadd {
+.icon-btn-close--todoadd {
   color: #000000;
 }
