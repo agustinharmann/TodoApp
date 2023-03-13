@@ -8,12 +8,12 @@ import './styles.css';
 
 const Home = () => {
 
-  const { searchedTodos, modalAdd, setModalAdd } = useContext(UserContext);
+  const { modalAdd, setModalAdd } = useContext(UserContext);
 
   return (
-    <div className='home'>
+    <main className='home'>
       <Status />
-      <TodoList searchedTodos={searchedTodos} />
+      <TodoList />
       <TodoAdd />
       <div className={modalAdd ? `disable` : `container_btn-drop--todoadd`}>
         <button
@@ -23,7 +23,7 @@ const Home = () => {
           <GoPlus className='icon_drop-modal--todoadd' />
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 

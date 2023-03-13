@@ -9,7 +9,9 @@ const Status = () => {
 
 
   return (
-    <div className='todo_counter--home'>
+    <section className='todo_counter--home'>
+      {/* cambiar clases de los p, cambiar clase "--home" */}
+      {/* traer lo estilos de status a este css */}
       <p className='title'>
         Total tasks: {totalTodos}
       </p>
@@ -19,7 +21,7 @@ const Status = () => {
       <p className='title'>
         Pendeing tasks: {incompleteTodos}
       </p>
-    </div>
+    </section>
   );
 };
 

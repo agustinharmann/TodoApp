@@ -39,43 +39,28 @@
   box-shadow: 0 0 7px black;
 }
 
-
 .check:active {
-  border: 2px solid rgb(28, 153, 28);
-  box-shadow: 0 0 5px rgb(28, 153, 28);
+  border: 2px solid #1C991C;
+  box-shadow: 0 0 5px #1C991C;
 }
 
 .delete:active {
-  border: 2px solid rgb(209, 35, 35);
-  box-shadow: 0 0 5px rgb(209, 35, 35);
+  border: 2px solid #B92D2D;
+  box-shadow: 0 0 5px #B92D2D;
 }
 
 .icon_check--todo_item {
   width: 30px;
   height: 30px;
-  color: green;
+  color: #008000;
 }
 
 .icon_delete--todo_item {
   width: 30px;
   height: 30px;
-  color: red;
+  color: #FF0000;
 }
 
 .completed {
-  text-decoration: 2px line-through rgb(28, 153, 28);
+  text-decoration: 2px line-through #1C991C;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

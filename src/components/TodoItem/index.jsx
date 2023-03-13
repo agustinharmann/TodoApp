@@ -8,7 +8,7 @@ const TodoItem = ({todo}) => {
   const { delteTodo, completeTodo, theme } = useContext(UserContext);
 
   return (
-    <div className={`todoitem ${ theme && 'ligth_todoitem' }`}>
+    <section className={`todoitem ${ theme && 'ligth_todoitem' }`}>
       <button
         className='btn--todo_item check'
         onClick={()=>completeTodo(todo.id)}
@@ -26,7 +26,7 @@ const TodoItem = ({todo}) => {
       >
         <AiOutlineClose className='icon_delete--todo_item' />
       </button>
-    </div>
+    </section>
 
   );
 };

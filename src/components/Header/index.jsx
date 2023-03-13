@@ -16,15 +16,17 @@ const Header = () => {
         <img className='logo__app' src={logo__app} alt='Logo TodoApp' />
       </div>
       <Navbar />
-      <div className='container_menu--header'>
+      <section className='container_menu--header'>
+        {/* cambiar la clase de menu en el css */}
         <div onClick={() => setTheme(!theme)} className={`cotainer_menu--header ${theme && 'cotainer_menu-rigth--header'}`}>
           <div className="redondito">
+            {/* cambiar la clase de redondito en el css */}
             {
               theme ? <BsSun className='sun-ligth_mode--header' /> : <BsMoon className={'sun-ligth_mode--header'} />
             }
           </div>
         </div>
-      </div>
+      </section>
     </header>
   );
 };

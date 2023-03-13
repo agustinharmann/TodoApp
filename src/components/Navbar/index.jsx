@@ -8,6 +8,8 @@ const Navbar = () => {
 
   return (
     <nav className='navbar'>
+      {/* agregar el coso ese de html que dice para q sirve el form */}
+      {/* form--navbar */}
       <form className='form_navbar--header'>
         <input
           className='input_navbar--header'

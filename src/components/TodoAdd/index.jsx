@@ -9,7 +9,8 @@ const TodoAdd = () => {
   const { description, modalAdd, setModalAdd, onInputChange, onFormSubmit, addTodo, theme } = useContext(UserContext);
 
   return (
-    <div className={!modalAdd ? 'disable' : 'todoadd'}>
+    <section className={!modalAdd ? 'disable' : 'todoadd'}>
+      {/* agregar el coso ese de html que dice para q sirve el form */}
       <form onSubmit={onFormSubmit} className={`form--todoadd ${ theme && 'form-ligth_mode--todoadd' }`}>
         <div className='container_btn-close--todoadd'>
           <button
@@ -23,7 +24,7 @@ const TodoAdd = () => {
           className='input--todoadd'
           type='text'
           autoComplete='off'
-          placeholder="Add task..."
+          placeholder='Add task...'
           name='description'
           onChange={onInputChange}
           value={description}
@@ -36,7 +37,7 @@ const TodoAdd = () => {
           Create
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 
