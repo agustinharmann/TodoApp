@@ -20,10 +20,11 @@
 .btn-drop_todoadd--home {
   width: 70px;
   height: 70px;
-  box-shadow: 0 0 5px #000000;
   border: none;
   border-radius: 50%;
+  box-shadow: 0 0 5px #000000;
   background-color: #5046c7;
+  cursor: pointer;
 }
 
 .btn_drop-modal_ligth--todoadd {
@@ -49,6 +50,11 @@
   .container-btn-drop_todoadd--home {
     width: auto;
     z-index: 400;
+  }
+
+  .btn-drop_todoadd--home {
+    width: 60px;
+    height: 60px;
   }
   
 }

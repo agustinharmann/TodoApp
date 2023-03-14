@@ -13,7 +13,7 @@ const init = () => {
 
 const UserProvider = ({ children }) => {
 
-  const [modalAdd, setModalAdd] = useState(false);
+  const [todoAdd, setTodoAdd] = useState(false);
   const [search, setSearch] = useState('');
 
   let [todos, dispatch] = useReducer(todoReducer, initialState, init);
@@ -21,6 +21,11 @@ const UserProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos) || []);
   }, [todos]);
+
+  const onInputTodoChange = ({ target }) => {
+    const valueTodo = target.value;
+    setSearch(valueTodo);
+  };
 
   const handleNewTodo = (todo) => {
     const action = {
@@ -46,7 +51,7 @@ const UserProvider = ({ children }) => {
       done: false,
     };
 
-    setModalAdd(false);
+    setTodoAdd(false);
     handleNewTodo(newTodo);
     onResetForm();
   };
@@ -63,11 +68,6 @@ const UserProvider = ({ children }) => {
       type: '[TODO] Complete Todo',
       payload: id,
     });
-  };
-
-  const onInputTodoChange = ({ target }) => {
-    const valueTodo = target.value;
-    setSearch(valueTodo);
   };
 
   const totalTodos = todos.length;
@@ -109,10 +109,11 @@ const UserProvider = ({ children }) => {
         description,
         onInputTodoChange,
         search,
-        modalAdd,
-        setModalAdd,
+        todoAdd,
+        setTodoAdd,
         onInputChange,
         onFormSubmit,
+        onResetForm,
         handleNewTodo,
         delteTodo,
         completeTodo,

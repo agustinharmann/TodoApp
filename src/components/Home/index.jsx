@@ -8,17 +8,17 @@ import './styles.css';
 
 const Home = () => {
 
-  const { modalAdd, setModalAdd } = useContext(UserContext);
+  const { todoAdd, setTodoAdd } = useContext(UserContext);
 
   return (
     <main className='home'>
       <Status />
       <TodoList />
       <TodoAdd />
-      <div className={modalAdd ? `disable-todoadd` : `container-btn-drop_todoadd--home`}>
+      <div className={todoAdd ? `disable-todoadd` : `container-btn-drop_todoadd--home`}>
         <button
           className='btn-drop_todoadd--home'
-          onClick={() => setModalAdd(!modalAdd)}
+          onClick={() => setTodoAdd(!todoAdd)}
         >
           <GoPlus className='icon-drop_todoadd--home' />
         </button>
