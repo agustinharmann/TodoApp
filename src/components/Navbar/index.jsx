@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../utils/userProvider';
+import { UserContext } from '../../useContext/userProvider';
 import './styles.css';
 
 const Navbar = () => {

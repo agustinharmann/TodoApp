@@ -1,4 +1,4 @@
-.todoitem {
+.todo-item_dark--todo-item {
   width: 100%;
   height: auto;
   min-height: 30px;
@@ -11,18 +11,18 @@
   box-shadow: 0px 2px 5px black;
 }
 
-.todoitem_ligth--todoitem {
+.todo-item_light--todo-item {
   background-color: #8a88a0;
 }
 
-.text--todoitem {
+.text--todo-item {
   width: 80%;
   height: auto;
   padding: 10px;
   overflow: auto;
 }
 
-.btn--todoitem  {
+.btn--todo-item {
   width: 30px;
   height: 30px;
   margin: 20px;
@@ -35,32 +35,32 @@
   box-shadow: 0 0 5px black;
 }
 
-.btn--todoitem:hover {
+.btn--todo-item:hover {
   box-shadow: 0 0 7px black;
 }
 
-.check--todoitem:active {
+.check--todo-item:active {
   border: 2px solid #1C991C;
   box-shadow: 0 0 5px #1C991C;
 }
 
-.delete--todoitem:active {
+.delete--todo-item:active {
   border: 2px solid #B92D2D;
   box-shadow: 0 0 5px #B92D2D;
 }
 
-.icon_check--todoitem {
+.icon_check--todo-item {
   width: 30px;
   height: 30px;
   color: #008000;
 }
 
-.icon_delete--todoitem {
+.icon_delete--todo-item {
   width: 30px;
   height: 30px;
   color: #FF0000;
 }
 
-.todo-completed--todoitem {
+.todo-completed--todo-item {
   text-decoration: 2px line-through #1C991C;
 }

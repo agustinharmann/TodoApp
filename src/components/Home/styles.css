@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.container-btn-drop_todoadd--home {
+.container-btn-drop_todo-add--home {
   width: 90%;
   height: auto;
   padding: 10px 0px;
@@ -17,7 +17,7 @@
   bottom: 0;
 }
 
-.btn-drop_todoadd--home {
+.btn-drop_todo-add--home {
   width: 70px;
   height: 70px;
   border: none;
@@ -27,19 +27,15 @@
   cursor: pointer;
 }
 
-.btn_drop-modal_ligth--todoadd {
-  background-color: #353255;
-}
-
-.btn-drop_todoadd--home:hover {
+.btn-drop_todo-add--home:hover {
   box-shadow: 0 0 15px #000000;
 }
 
-.btn-drop_todoadd--home:active {
+.btn-drop_todo-add--home:active {
   box-shadow: 0 0 20px #000000;
 }
 
-.icon-drop_todoadd--home {
+.icon-drop_todo-add--home {
   width: 75%;
   height: 75%;
   color: #FFFFFF;
@@ -47,12 +43,12 @@
 
 @media only screen and (max-width: 969px) {
 
-  .container-btn-drop_todoadd--home {
+  .container-btn-drop_todo-add--home {
     width: auto;
     z-index: 400;
   }
 
-  .btn-drop_todoadd--home {
+  .btn-drop_todo-add--home {
     width: 60px;
     height: 60px;
   }

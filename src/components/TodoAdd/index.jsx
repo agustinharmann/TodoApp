@@ -1,6 +1,5 @@
-import React from 'react';
-import { useContext } from 'react';
-import { UserContext } from '../../utils/userProvider';
+import React, { useContext } from 'react';
+import { UserContext } from '../../useContext/userProvider';
 import { IoCloseSharp } from 'react-icons/io5';
 import './styles.css';
 
@@ -9,21 +8,21 @@ const TodoAdd = () => {
   const { description, todoAdd, setTodoAdd, onInputChange, onFormSubmit, onResetForm, theme } = useContext(UserContext);
 
   return (
-    <section className={!todoAdd ? 'disable-todoadd' : 'todoadd'}>
+    <section className={!todoAdd ? 'disable-todo-add' : 'todo-add'}>
       <form
-        className={`form--todoadd ${theme && 'form_ligth--todoadd'}`}
+        className={`form_dark--todo-add ${theme && 'form_light--todo-add'}`}
         onSubmit={onFormSubmit}>
-        <div className='container-btn-close--todoadd'>
+        <div className='container-btn-close--todo-add'>
           <button
-            className='btn-close--todoadd'
+            className='btn-close--todo-add'
             onClick={() => setTodoAdd(!todoAdd)}
           >
-            <IoCloseSharp className='icon-btn-close--todoadd' />
+            <IoCloseSharp className='icon-btn-close--todo-add' />
           </button>
         </div>
-        <div className='container-input--todoadd'>
+        <div className='container-input--todo-add'>
           <input
-            className='input--todoadd'
+            className='input--todo-add'
             type='text'
             autoComplete='off'
             placeholder='Add task...'
@@ -32,14 +31,14 @@ const TodoAdd = () => {
             value={description}
           />
           <button
-            className='btn-reset_input--todoadd'
+            className='btn-reset_input--todo-add'
             onClick={onResetForm}
           >
             X
           </button>
         </div>
         <button
-          className='btn-add--todoadd'
+          className='btn-add--todo-add'
           type='submit'
         >
           Create

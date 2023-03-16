@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../utils/userProvider';
+import { UserContext } from '../../useContext/userProvider';
 import { Status } from '../Status';
 import { TodoList } from '../TodoList';
 import { TodoAdd } from '../TodoAdd';
@@ -15,12 +15,12 @@ const Home = () => {
       <Status />
       <TodoList />
       <TodoAdd />
-      <div className={todoAdd ? `disable-todoadd` : `container-btn-drop_todoadd--home`}>
+      <div className={todoAdd ? `disable-todo-add` : `container-btn-drop_todo-add--home`}>
         <button
-          className='btn-drop_todoadd--home'
+          className='btn-drop_todo-add--home'
           onClick={() => setTodoAdd(!todoAdd)}
         >
-          <GoPlus className='icon-drop_todoadd--home' />
+          <GoPlus className='icon-drop_todo-add--home' />
         </button>
       </div>
     </main>

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../utils/userProvider';
+import { UserContext } from '../../useContext/userProvider';
 import { TodoItem } from '../TodoItem';
 import './styles.css';
 
@@ -8,7 +8,7 @@ const TodoList = () => {
   const { searchedTodos } = useContext(UserContext);
 
   return (
-    <section className='todolist'>
+    <section className='todo-list'>
       {
         searchedTodos.map(todo =>
           <TodoItem

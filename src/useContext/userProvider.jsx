@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { createContext, useReducer } from 'react';
-import { useForm } from './customHook/useForm';
-import { todoReducer } from './todoReducer';
+import React, { useEffect, useState, createContext, useReducer } from 'react';
+import { useForm } from '../customHook/useForm';
+import { todoReducer } from '../useReducer/todoReducer';
 
 const UserContext = createContext();
 
@@ -43,7 +42,7 @@ const UserProvider = ({ children }) => {
   const onFormSubmit = (e) => {
     e.preventDefault();
 
-    if (description.length <= 1) return;
+    if (!description.length) return;
 
     const newTodo = {
       id: new Date().getTime(),
@@ -76,7 +75,7 @@ const UserProvider = ({ children }) => {
 
   let searchedTodos = [];
 
-  if (!search.length >= 1) {
+  if (!search.length) {
     searchedTodos = todos;
   } else {
     searchedTodos = todos.filter(todo => {
@@ -90,16 +89,16 @@ const UserProvider = ({ children }) => {
     const savedMode = JSON.parse(localStorage.getItem('theme'));
     return savedMode !== null ? savedMode : false;
   });
-
+ 
   useEffect(() => {
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
   const body = document.getElementsByTagName('body')[0];
   if (theme) {
-    body.classList.add('body__theme');
+    body.classList.add('body_light');
   } else {
-    body.classList.remove('body__theme');
+    body.classList.remove('body_light');
   };
 
   return (

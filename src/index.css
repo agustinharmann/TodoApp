@@ -15,11 +15,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.body__theme {
+.body_light{
   background-color: #d3d0d0;
 }
 
-.disable-todoadd {
+.disable-todo-add {
   display: none;
 }
 

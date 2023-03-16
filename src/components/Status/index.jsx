@@ -1,15 +1,13 @@
-import { useContext } from 'react';
-import { UserContext } from '../../utils/userProvider';
+import React, { useContext } from 'react';
+import { UserContext } from '../../useContext/userProvider';
 import './styles.css';
 
 const Status = () => {
 
   const { totalTodos, completedTodos, incompleteTodos } = useContext(UserContext);
 
-
   return (
     <section className='status'>
-      {/* cambiar clases de los p, cambiar clase "--home" */}
       <p className='title--status'>
         Total tasks: {totalTodos}
       </p>
