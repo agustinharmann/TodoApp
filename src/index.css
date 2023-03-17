@@ -18,10 +18,6 @@ body {
   background-color: #d3d0d0;
 }
 
-.disable-todo-add {
-  display: none;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

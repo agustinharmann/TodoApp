@@ -1,4 +1,4 @@
-.todo-item_dark--todo-item {
+.todo-item--todo-item {
   width: 100%;
   height: auto;
   min-height: 30px;
@@ -11,6 +11,10 @@
   box-shadow: 0px 2px 5px black;
 }
 
+.todo-item_dark--todo-item {
+  background-color: #74737e;
+}
+
 .todo-item_light--todo-item {
   background-color: #8a88a0;
 }
@@ -20,6 +24,10 @@
   height: auto;
   padding: 10px;
   overflow: auto;
+}
+
+.todo-completed--todo-item {
+  text-decoration: 2px line-through #1C991C;
 }
 
 .btn--todo-item {
@@ -59,8 +67,4 @@
   width: 30px;
   height: 30px;
   color: #FF0000;
-}
-
-.todo-completed--todo-item {
-  text-decoration: 2px line-through #1C991C;
 }

@@ -10,7 +10,7 @@
   z-index: 400;
 }
 
-.form_dark--todo-add {
+.form--todo-add {
   width: 80%;
   max-width: 800px;
   height: auto;
@@ -20,6 +20,10 @@
   align-items: center;
   border: 2px solid #0cb2e0;
   border-radius: 5px;
+  background-color: #302e2e;
+}
+
+.form_dark--todo-add {
   background-color: #302e2e;
 }
 

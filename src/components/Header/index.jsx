@@ -11,14 +11,14 @@ const Header = () => {
   const { theme, setTheme } = useContext(UserContext);
 
   return (
-    <header className={`header_dark--header ${theme && 'header_light--header'}`}
+    <header className={`header--header ${theme ? 'header_light--header' : 'header_dark--header'}`}
     >
       <div className='container-logo--header'>
         <img className='logo-app--header' src={logo__app} alt='Logo TodoApp' />
       </div>
       <Navbar />
       <section className='container-theme--header'>
-        <div className={`container-btn-theme_dark--header ${theme && 'container-btn-theme_light--header'}`}
+        <div className={`${theme ? 'container-btn-theme_light--header' : 'container-btn-theme_dark--header' }`}
         >
           <button className='btn-theme--header'
             onClick={() => setTheme(!theme)}

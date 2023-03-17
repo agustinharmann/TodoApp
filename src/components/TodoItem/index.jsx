@@ -9,7 +9,7 @@ const TodoItem = ({ todo }) => {
   const { delteTodo, completeTodo, theme } = useContext(UserContext);
 
   return (
-    <section className={`todo-item_dark--todo-item ${theme && 'todo-item_light--todo-item'}`}>
+    <li className={`todo-item--todo-item ${theme ? 'todo-item_light--todo-item' : 'todo-item_dark--todo-item'}`}>
       <button
         className='btn--todo-item check--todo-item'
         onClick={() => completeTodo(todo.id)}
@@ -17,7 +17,7 @@ const TodoItem = ({ todo }) => {
         <AiOutlineCheck className='icon_check--todo-item' />
       </button>
 
-      <p className={`text--todo-item ${todo.done && 'todo-completed--todo-item'}`}>
+      <p className={`text--todo-item ${todo.done ? 'todo-completed--todo-item' : ''}`}>
         {todo.description}
       </p>
 
@@ -27,7 +27,7 @@ const TodoItem = ({ todo }) => {
       >
         <AiOutlineClose className='icon_delete--todo-item' />
       </button>
-    </section>
+    </li>
 
   );
 };

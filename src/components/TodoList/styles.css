@@ -3,8 +3,14 @@
   max-width: 700px;
   height: auto;
   margin-bottom: 84px;
+  z-index: 300;
+}
+
+.content--todo-list {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 300;
 }

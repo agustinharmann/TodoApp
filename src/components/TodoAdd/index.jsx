@@ -8,12 +8,13 @@ const TodoAdd = () => {
   const { description, todoAdd, setTodoAdd, onInputChange, onFormSubmit, onResetForm, theme } = useContext(UserContext);
 
   return (
-    <section className={!todoAdd ? 'disable-todo-add' : 'todo-add'}>
+    <section className='todo-add'>
       <form
-        className={`form_dark--todo-add ${theme && 'form_light--todo-add'}`}
+        className={`form--todo-add ${theme ? 'form_light--todo-add' : 'form_dark--todo-add'}`}
         onSubmit={onFormSubmit}>
         <div className='container-btn-close--todo-add'>
           <button
+            type='button'
             className='btn-close--todo-add'
             onClick={() => setTodoAdd(!todoAdd)}
           >
@@ -32,6 +33,7 @@ const TodoAdd = () => {
           />
           <button
             className='btn-reset_input--todo-add'
+            type='button'
             onClick={onResetForm}
           >
             X

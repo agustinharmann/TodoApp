@@ -9,13 +9,15 @@ const TodoList = () => {
 
   return (
     <section className='todo-list'>
-      {
-        searchedTodos.map(todo =>
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-          />)
-      }
+      <ul className='content--todo-list'>
+        {
+          searchedTodos.map(todo =>
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+            />)
+        }
+      </ul>
     </section>
   );
 };

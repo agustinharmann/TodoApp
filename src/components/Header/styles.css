@@ -1,4 +1,4 @@
-.header_dark--header {
+.header--header {
   width: 100%;
   height: auto;
   padding: 20px 0px;
@@ -7,10 +7,13 @@
   align-items: center;
   border-radius: 0px 0px 8px 8px;
   box-shadow: 0px 1px 3px #000000;
-  background-color: #16161f;
   position: sticky;
   top: 0;
   z-index: 400;
+}
+
+.header_dark--header {
+  background-color: #16161f;
 }
 
 .header_light--header {
@@ -51,7 +54,13 @@
 }
 
 .container-btn-theme_light--header {
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
+  border-radius: 25px;
+  background-color: #808080;
 }
 
 .btn-theme--header {
@@ -88,6 +97,11 @@
   }
 
   .container-btn-theme_dark--header {
+    width: auto;
+    height: auto;
+  }
+
+  .container-btn-theme_light--header {
     width: auto;
     height: auto;
   }
