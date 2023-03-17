@@ -19,7 +19,6 @@ const Home = () => {
           <div className='container-btn-drop_todo-add--home'>
             <button
               className='btn-drop_todo-add--home'
-              // disabled={!todoAdd}
               onClick={() => setTodoAdd(true)}
             >
               <GoPlus className='icon-drop_todo-add--home' />
