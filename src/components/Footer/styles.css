@@ -62,7 +62,7 @@
 @media only screen and (max-width: 768px) {
 
   .container-section--footer:first-child {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .column--footer {
