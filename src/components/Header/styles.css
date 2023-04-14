@@ -1,7 +1,7 @@
-.header--header {
+.header {
   width: 100%;
   height: auto;
-  padding: 20px 0px;
+  padding: 10px 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -43,24 +43,23 @@
   align-items: center;
 }
 
-.container-btn-theme_dark--header {
+.container-btn-theme--header {
   width: 50px;
   height: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  border: none;
   border-radius: 25px;
   background-color: #808080;
+  cursor: pointer;
+}
+
+.container-btn-theme_dark--header {
+  justify-content: flex-start;
 }
 
 .container-btn-theme_light--header {
-  width: 50px;
-  height: 30px;
-  display: flex;
-  align-items: center;
   justify-content: flex-end;
-  border-radius: 25px;
-  background-color: #808080;
 }
 
 .btn-theme--header {
@@ -74,7 +73,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 
 .icon-btn-theme--header {
@@ -84,15 +82,19 @@
 
 @media only screen and (max-width: 600px) {
 
+  .header {
+    padding: 0px;
+  }
+
   .container-logo--header {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     margin: 10px;
   }
 
   .container-theme--header {
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     margin: 10px;
   }
 

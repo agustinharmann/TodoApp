@@ -8,22 +8,22 @@ import './styles.css';
 
 const Home = () => {
 
-  const { todoAdd, setTodoAdd } = useContext(UserContext);
+  const { searchedTodos, todoAdd, setTodoAdd } = useContext(UserContext);
 
   return (
     <main className='home'>
       <Status />
-      <TodoList />
+      { searchedTodos.length ? <TodoList /> : null}
       {
         todoAdd ? <TodoAdd /> :
-          <div className='container-btn-drop_todo-add--home'>
+          <article className='container-btn-drop_todo-add--home'>
             <button
               className='btn-drop_todo-add--home'
               onClick={() => setTodoAdd(true)}
             >
               <GoPlus className='icon-drop_todo-add--home' />
             </button>
-          </div>
+          </article>
       }
     </main>
   );

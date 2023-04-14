@@ -7,7 +7,7 @@ const Status = () => {
   const { totalTodos, completedTodos, incompleteTodos } = useContext(UserContext);
 
   return (
-    <div className='status'>
+    <article className='status'>
       <p className='title--status'>
         Total tasks: {totalTodos}
       </p>
@@ -17,7 +17,7 @@ const Status = () => {
       <p className='title--status'>
         Pendeing tasks: {incompleteTodos}
       </p>
-    </div>
+    </article>
   );
 };
 
