@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { UserContext } from '../../useContext/userProvider';
-import logo__app from '../../assets/logo__app.png';
+import logo_web from '../../assets/logo_web.png';
 import { Navbar } from '../Navbar';
 import { BsSun, BsMoon } from 'react-icons/bs';
 import './styles.css';
@@ -13,7 +13,7 @@ const Header = () => {
     <header className={`header ${theme ? 'header_light--header' : 'header_dark--header'}`}
     >
       <div className='container-logo--header'>
-        <img className='logo-app--header' src={logo__app} alt='Logo TodoApp' />
+        <img className='logo-app--header' src={logo_web} alt='Logo TodoApp' />
       </div>
       <Navbar />
       <section className='container-theme--header'>
